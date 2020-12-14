@@ -15,6 +15,19 @@ public class LittleSLL
     {
         head = new Node(addData, head);
     }
+    
+    public void deleteNodeFromStart()
+    {
+        if(head != null)
+        {
+            head = head.getLink();
+        }
+        else
+        {
+            System.out.println("Delete from an empty list?");
+            System.exit(0);
+        }
+    }
 
     //to display the list
     public void showList()
