@@ -28,6 +28,28 @@ public class LittleSLL
             System.exit(0);
         }
     }
+    
+    public boolean hasNext()
+    {
+        LittleSLL.Node position = head;
+        if(position.getLink() != null)
+        {
+            return true;
+        }
+        return false;
+    }//end method hasNext
+
+    public int length()
+    {
+        int count = 0;
+        LittleSLL.Node position  = head;
+        while(position != null)
+        {
+            count++;
+            position = position.getLink();
+        }
+        return count;
+    }
 
     //to display the list
     public void showList()
